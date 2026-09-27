@@ -8,8 +8,16 @@ Track expenses from an iPhone Shortcut with a free Google Sheets back end. This 
 
 1. Download the file on your iPhone and open it.
 2. On the preview screen, tap **Add Shortcut**.
+
+   ![The iPhone Shortcut preview screen with the Add Shortcut button](images/10-add-shortcut.jpg)
+
 3. Open the added shortcut in the Shortcuts app. In every category section, tap the **Get Contents of URL** node and paste the Web App URL from your own Apps Script deployment.
+
+   ![Get Contents of URL nodes under the Food and Travel categories](images/09-edit-url-nodes-food.jpg)
+
 4. Use the same Web App URL in every **Get Contents of URL** node, then run the shortcut to test it.
+
+   ![Get Contents of URL nodes under the Travel and Shopping categories](images/08-edit-url-nodes.jpg)
 
 Do this URL setup only after adding the downloaded file as a shortcut.
 
@@ -33,9 +41,18 @@ No paid service, API key, or add-on is needed.
 ## 1. Create the Google Apps Script project
 
 1. On your laptop, open [Google Sheets](https://sheets.new) and give the blank spreadsheet any name, such as **Expenses**.
+
+   ![A new blank Google Sheet named Expenses](images/01-create-google-sheet.png)
+
 2. Select **Extensions → Apps Script**.
+
+   ![The Extensions menu with Apps Script selected](images/02-open-apps-script.png)
+
 3. In the file named `Code.gs`, delete the sample code.
 4. Copy everything from this repository's [`Code.gs`](Code.gs) file and paste it into the editor.
+
+   ![The Apps Script editor with the expense tracker code in Code.gs](images/03-paste-code.png)
+
 5. Save the project.
 
 The blank spreadsheet is only used to host the Apps Script project. The script creates the monthly expense spreadsheets itself after it receives the first request.
@@ -43,11 +60,21 @@ The blank spreadsheet is only used to host the Apps Script project. The script c
 ## 2. Deploy it as a web app
 
 1. In Apps Script, select **Deploy → New deployment**.
+
+   ![The Deploy menu with New deployment](images/04-new-deployment.png)
+
 2. Click the gear beside **Select type** and choose **Web app**.
 3. Leave **Execute as** set to **Me**.
 4. Under **Who has access**, choose **Anyone**. Do not use **Only myself**: Shortcuts will not be able to add expenses without Google sign-in.
+
+   ![The Web app deployment configuration screen; change Who has access from Only myself to Anyone](images/05-web-app-access.png)
+
 5. Click **Deploy** and complete Google's authorization prompts.
 6. Copy the **Web app URL** that Apps Script shows. You can find it again at **Deploy → Manage deployments**.
+
+   ![The Deploy menu with Manage deployments](images/06-manage-deployments.png)
+
+   ![The Manage deployments screen showing the Web app URL and Copy button](images/07-copy-web-app-url.png)
 
 Keep this URL private. Anyone who has it can submit expenses to this tracker.
 
