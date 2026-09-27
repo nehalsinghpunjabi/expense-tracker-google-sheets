@@ -9,15 +9,15 @@ Track expenses from an iPhone Shortcut with a free Google Sheets back end. This 
 1. Download the file on your iPhone and open it.
 2. On the preview screen, tap **Add Shortcut**.
 
-   ![The iPhone Shortcut preview screen with the Add Shortcut button](images/10-add-shortcut.jpg)
+   ![The iPhone Shortcut preview screen with the Add Shortcut button](images/10-add-shortcut.png)
 
 3. Open the added shortcut in the Shortcuts app. In every category section, tap the **Get Contents of URL** node and paste the Web App URL from your own Apps Script deployment.
 
-   ![Get Contents of URL nodes under the Food and Travel categories](images/09-edit-url-nodes-food.jpg)
+   ![Get Contents of URL nodes under the Food and Travel categories](images/09-edit-url-nodes-food.png)
 
 4. Use the same Web App URL in every **Get Contents of URL** node, then run the shortcut to test it.
 
-   ![Get Contents of URL nodes under the Travel and Shopping categories](images/08-edit-url-nodes.jpg)
+   ![Get Contents of URL nodes under the Travel and Shopping categories](images/08-edit-url-nodes.png)
 
 Do this URL setup only after adding the downloaded file as a shortcut.
 
