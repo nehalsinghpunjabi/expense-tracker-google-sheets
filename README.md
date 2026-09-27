@@ -2,6 +2,10 @@
 
 Track expenses from an iPhone Shortcut with a free Google Sheets back end. This project uses Google Apps Script (included as `Code.gs`) to create one spreadsheet per month, store the expenses, and build a category dashboard automatically.
 
+## Main iPhone component
+
+[`Add Expense.shortcut`](Add%20Expense.shortcut) is the ready-to-import iPhone Shortcut supplied with this project. Download it from this repository on your iPhone and open it to add it to the Shortcuts app. Then replace the Web app URL in each **Get Contents of URL** action with the URL from your own Apps Script deployment.
+
 ## What it creates
 
 The first expense in a month creates an **Expense Tracker** folder in Google Drive and a spreadsheet named `Expense Tracker - Month Year`. Each monthly spreadsheet includes:
@@ -34,7 +38,7 @@ The blank spreadsheet is only used to host the Apps Script project. The script c
 1. In Apps Script, select **Deploy → New deployment**.
 2. Click the gear beside **Select type** and choose **Web app**.
 3. Leave **Execute as** set to **Me**.
-4. Under **Who has access**, choose the option that lets your iPhone Shortcut send the request (typically **Anyone**). Do not use **Only myself**: Shortcuts will not be able to add expenses without Google sign-in.
+4. Under **Who has access**, choose **Anyone**. Do not use **Only myself**: Shortcuts will not be able to add expenses without Google sign-in.
 5. Click **Deploy** and complete Google's authorization prompts.
 6. Copy the **Web app URL** that Apps Script shows. You can find it again at **Deploy → Manage deployments**.
 
@@ -57,7 +61,7 @@ Make one menu option (or one shortcut) for each category. In each branch, use th
 4. **Get Contents of URL** — paste the Web app URL. Set Method to **POST** and Request Body to **JSON**, then select the Dictionary as its JSON body.
 5. Optional: add **Show Result** after it to display the response.
 
-Repeat the **Get Contents of URL** action in every menu branch if your Shortcut has separate category nodes, using the same Web app URL each time.
+Repeat the **Get Contents of URL** action in every menu branch if your Shortcut has separate category nodes, using the same Web app URL each time. The included [`Add Expense.shortcut`](Add%20Expense.shortcut) is the starting point for this setup.
 
 Example request body:
 
